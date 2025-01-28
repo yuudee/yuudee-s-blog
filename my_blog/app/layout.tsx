@@ -24,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="jp">
+      <head>
+        <script src="https://embed.zenn.studio/js/listen-embed-event.js"></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
