@@ -6,5 +6,12 @@ const nextConfig: NextConfig = {
     domains: ['yuudee.net'],
   },
 };
+module.exports = {
+  env: {
+    BASE_URL: process.env.NODE_ENV === "production"
+      ? "https://yuudee.net"
+      : "http://localhost:3000",
+  }
+};
 
 export default nextConfig;
