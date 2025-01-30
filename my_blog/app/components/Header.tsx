@@ -24,12 +24,12 @@ export function Header() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/about" className="hover:underline">
+                        <Link href="/others/about_me" className="hover:underline">
                             About Me
                         </Link>
                     </li>
                     <li>
-                        <Link href="/book" className="hover:underline">
+                        <Link href="/others/book" className="hover:underline">
                             Book
                         </Link>
                     </li>

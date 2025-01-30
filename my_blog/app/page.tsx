@@ -1,6 +1,5 @@
 import Image from "next/image";
 import MysnsButton from "./components/my_sns";
-import Link from "next/link"
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import profile_img from '../public/imgs/profile.png'

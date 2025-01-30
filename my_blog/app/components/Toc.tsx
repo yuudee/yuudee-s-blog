@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import tocbot from 'tocbot'
+import * as tocbot from 'tocbot';  // 修正: tocbotを名前付きインポート
 
 const Toc = () => {
     useEffect(() => {

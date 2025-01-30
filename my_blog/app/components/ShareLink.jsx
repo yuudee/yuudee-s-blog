@@ -18,8 +18,9 @@ export const ShareLink = ({ url }) => {
     };
 
     return (
-        <div>
-            <div className='mt-4 hover:transform hover:duration-100 hover:scale-110 cursor-pointer'><button onClick={handleCopy} className="button"><Image alt="sns_icon" className='w-7 h-7' src={share_icon} /></button></div>
+        <div className="wrap">
+            <div className='tooltip' style={{ opacity: displayTooltip ? 1 : 0 }}>URLをコピーしました</div>
+            <div className='hover:transform hover:duration-500 hover:scale-110 cursor-pointer mt-4'><button onClick={handleCopy} className="button"><Image alt="sns_icon" className='w-7 h-7' src={share_icon} /></button></div>
         </div>
     )
 };
