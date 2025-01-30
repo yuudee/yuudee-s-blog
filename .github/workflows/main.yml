@@ -49,3 +49,6 @@ jobs:
 
       - name: delete ssh key
         run: cd ${DEPLOY_PATH}/my_blog && rm -f key
+        env:
+           DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+

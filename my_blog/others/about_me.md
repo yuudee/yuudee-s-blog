@@ -17,17 +17,17 @@ category: 'security'
 ### X(旧Twitter)
 [https://x.com/yuu__dee](https://x.com/yuu__dee)
 ### Github
-- ほとんど更新してできていないのでなるべく更新したいと思います
+ほとんど更新してできていないのでなるべく更新したいと思います
 [https://github.com/yuudee](https://github.com/yuudee)
 
 
 ## その他
 ### Qiita
-- CTFとかTHMとかのWriteupとかを上げてます．
+CTFとかTHMとかのWriteupとかを上げてます．
 [https://qiita.com/yuudee](https://qiita.com/yuudee)
 
 ### Zenn
-- まだ何もかけていませんが最終的にはブログとZennの二刀流で行きたいとか思ってます．
+まだ何もかけていませんが最終的にはブログとZennの二刀流で行きたいとか思ってます．
 [https://zenn.dev/yuudee](https://zenn.dev/yuudee)
 
 # 保有資格
