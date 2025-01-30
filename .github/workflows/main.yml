@@ -2,7 +2,7 @@ name: Build and Deploy to VPS
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build_and_deploy:
