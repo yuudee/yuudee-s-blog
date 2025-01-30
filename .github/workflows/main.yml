@@ -40,7 +40,7 @@ jobs:
           SSH_HOST: ${{ secrets.SSH_HOST }}
 
       - name: Start server
-        run: ssh -p ${SSH_PORT} -i key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SSH_USER@$SSH_HOST "cd ${DEPLOY_PATH} && chmod +x ./start_server.sh && ./start_server.sh"
+        run: ssh -p ${SSH_PORT} -i key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null $SSH_USER@$SSH_HOST "cd ${DEPLOY_PATH}/myblog && chmod +x ./start_server.sh && ./start_server.sh"
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_PORT: ${{ secrets.SSH_PORT }}
