@@ -1,10 +1,10 @@
 ---
 title: '自己紹介'
-date: '2025/01/17'
+date: '2025/01/18'
 read_time : '3m'
 image: '/profile.png'
 description: 'これはyuudeeの自己紹介ページです'
-category: 'security'
+category: 'self_development'
 ---
 
 # はじめに

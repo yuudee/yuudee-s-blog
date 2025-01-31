@@ -42,7 +42,7 @@ const Markdown_to_Html = ({ MarkdownText }) => {
     }, [htmlContent]);  // htmlContentが変更されたときのみ再実行
 
     return (
-        <div className="flex flex-col md:grid md:grid-cols-[10fr_70fr_3fr_30fr_3fr] znc toc_content">
+        <div className="flex flex-col md:grid md:grid-cols-[10fr_70fr_3fr_30fr_3fr] znc toc_content dark:text-black">
             <div></div>
             <div className="order-2 md:order-none bg-white mb-10 pb-10 px-10 rounded-lg">
                 <div id="content" dangerouslySetInnerHTML={{ __html: htmlContent }} />

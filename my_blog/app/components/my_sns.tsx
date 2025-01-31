@@ -7,30 +7,23 @@ import qiita_logo from '../../public/imgs/qiita-icon.png'
 const MysnsButton = () => {
     return (
         <div className="grid grid-cols-2 gap-5 md:grid-cols-none md:flex md:justify-center">
-            <button className="bg-white text-black px-4 py-2 border border-black rounded flex items-center space-x-2 hover:transform hover:duration-500 hover:scale-110 cursor-pointer">
-                <a href="https://x.com/yuu__dee" target="_blank" rel="noopener noreferrer">
-                    <Image alt="sns_icon" className="w-7 h-7" src={X_logo} />
-                </a>
+            <a href="https://x.com/yuu__dee" target="_blank" rel="noopener noreferrer" className='bg-white text-black px-4 py-2 border border-black rounded flex items-center space-x-2 hover:transform hover:duration-500 hover:scale-110 cursor-pointer'>
+                <Image alt="sns_icon" className="w-7 h-7" src={X_logo} />
                 <span>X</span>
-            </button>
-            <button className="bg-white text-black px-4 py-2 border border-black rounded flex items-center space-x-2 hover:transform hover:duration-500 hover:scale-110 cursor-pointer">
-                <a href="https://github.com/yuudee" target="_blank" rel="noopener noreferrer">
-                    <Image alt="sns_icon" className="w-7 h-7" src={github_logo} />
-                </a>
+            </a>
+            <a href="https://github.com/yuudee" target="_blank" rel="noopener noreferrer" className='bg-white text-black px-4 py-2 border border-black rounded flex items-center space-x-2 hover:transform hover:duration-500 hover:scale-110 cursor-pointer'>
+                <Image alt="sns_icon" className="w-7 h-7" src={github_logo} />
                 <span>Github</span>
-            </button>
-            <button className="bg-white text-black px-4 py-2 border border-black rounded flex items-center space-x-2 hover:transform hover:duration-500 hover:scale-110 cursor-pointer">
-                <a href="https://zenn.dev/yuudee" target="_blank" rel="noopener noreferrer">
-                    <Image alt="sns_icon" className="w-7 h-7" src={zenn_logo} />
-                </a>
+            </a>
+            <a href="https://zenn.dev/yuudee" target="_blank" rel="noopener noreferrer" className="bg-white text-black px-4 py-2 border border-black rounded flex items-center space-x-2 hover:transform hover:duration-500 hover:scale-110 cursor-pointer">
+                <Image alt="sns_icon" className="w-7 h-7" src={zenn_logo} />
                 <span>Zenn</span>
-            </button>
-            <button className="bg-white text-black px-4 py-2 border border-black rounded flex items-center space-x-2 hover:transform hover:duration-500 hover:scale-110 cursor-pointer">
-                <a href="https://qiita.com/yuudee" target="_blank" rel="noopener noreferrer">
-                    <Image alt="sns_icon" className="w-7 h-7" src={qiita_logo} />
-                </a>
+            </a>
+            <a href="https://qiita.com/yuudee" target="_blank" rel="noopener noreferrer" className="bg-white text-black px-4 py-2 border border-black rounded flex items-center space-x-2 hover:transform hover:duration-500 hover:scale-110 cursor-pointer">
+                <Image alt="sns_icon" className="w-7 h-7" src={qiita_logo} />
                 <span>Qiita</span>
-            </button>
+            </a>
+
         </div>
     )
 };
