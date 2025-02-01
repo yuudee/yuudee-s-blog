@@ -16,28 +16,29 @@ export function getAllPosts() {
 
             return {
                 slug: fileName.replace(/\.md$/, ''),
-                title: data.title || 'No Title',   // タイトルがない場合のデフォルト
-                date: data.date || '0000-00-00',   // dateがない場合のデフォルト
-                category: data.category || 'uncategorized',  // カテゴリがない場合のデフォルト
-                read_time: data.read_time || '0m',
-                description: data.description || 'No Description', // 記事の説明がない場合
+                title: data.title || 'No Title',
+                date: data.date || '1970-01-01',
+                category: data.category || 'uncategorized',
+                description: data.description || '',
             };
         });
 
-    // 日付順（降順）にソート
-    const sortedPosts = [...posts].sort((a, b) => (a.date < b.date ? 1 : -1));
+    // カテゴリごとに分類（カテゴリがない場合も空の配列を確保）
+    const categorizedPosts: Record<string, any[]> = {
+        security: [],
+        self_development: [],
+        AI_ML: [],
+    };
 
-    // カテゴリごとに分類してソート
-    const categorizedPosts = posts.reduce((acc, post) => {
-        const category = post.category
-        if (!acc[category]) {
-            acc[category] = [];
+    posts.forEach(post => {
+        const category = post.category;
+        if (!categorizedPosts[category]) {
+            categorizedPosts[category] = [];
         }
-        acc[category].push(post);
-        return acc;
-    }, {});
+        categorizedPosts[category].push(post);
+    });
 
-    // 各カテゴリ内で日付順にソート（降順）し、最大5件まで取得
+    // 各カテゴリで最大3件取得
     Object.keys(categorizedPosts).forEach(category => {
         categorizedPosts[category] = categorizedPosts[category]
             .sort((a, b) => (a.date < b.date ? 1 : -1))
@@ -45,7 +46,7 @@ export function getAllPosts() {
     });
 
     return {
-        sortedPosts: sortedPosts.slice(0, 3), // 最近の記事も最大5件まで
+        sortedPosts: posts.sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 3),
         categorizedPosts,
     };
 }
