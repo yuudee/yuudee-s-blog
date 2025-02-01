@@ -14,7 +14,7 @@ export const Footer = () => {
                     <a href="https://zenn.dev/yuudee" target="_blank" rel="noopener noreferrer" className='hover:transform hover:duration-500 hover:scale-110 cursor-pointer'><Image alt="sns_icon" className='w-7 h-7' src={zenn_logo} /></a>
                     <a href="https://qiita.com/yuudee" target='_blank' rel="noopener noreferrer" className='hover:transform hover:duration-500 hover:scale-110 cursor-pointer'><Image alt="sns_icon" className='w-7 h-7' src={qiita_logo} /></a>
                 </div>
-                <p className='flex justify-center text-black'>© 2024 yuudee.net All Rights Reserved.</p>
+                <p className='flex justify-center text-black'>&copy; 2025 yuudee.net All Rights Reserved.</p>
             </div >
         </footer >
     )

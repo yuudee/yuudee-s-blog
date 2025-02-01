@@ -1,6 +1,12 @@
-import Link from "next/link"
+"use client"
+import Link from "next/link";
+import { useState } from "react";
+import Image from "next/image";
+import under_arrow from "../../public/under_arrow.svg"
 
 export function Header() {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
     return (
         <header>
             <div className="bg-gray-200 text-black p-4">
@@ -18,10 +24,28 @@ export function Header() {
                             Home
                         </Link>
                     </li>
-                    <li>
-                        <Link href="/blogs" className="hover:underline">
+                    <li className="relative"
+                        onMouseEnter={() => setIsDropdownOpen(true)}
+                        onMouseLeave={() => setIsDropdownOpen(false)}>
+                        <Link href="/blogs/blogs_all" className="hover:underline">
                             Blogs All
                         </Link>
+                        <div className={`absolute left-0 mt-2 w-40 bg-white shadow-lg border border-gray-300 rounded-md overflow-hidden transition-all duration-300 ease-in-out -m-10 text-sm ${isDropdownOpen ? 'opacity-100 max-h-60' : 'opacity-0 max-h-0'}`}>
+                            <ul>
+                                <li>
+                                    <Link href="/blogs/blogs_all" className="block px-4 py-2 hover:bg-gray-100 text-center">全ての記事</Link>
+                                </li>
+                                <li>
+                                    <Link href="/blogs/security" className="block px-4 py-2 hover:bg-gray-100 text-center">セキュリティ関連</Link>
+                                </li>
+                                <li>
+                                    <Link href="/blogs/ai_ml" className="block px-4 py-2 hover:bg-gray-100 text-center">AI・機械学習関連</Link>
+                                </li>
+                                <li>
+                                    <Link href="/blogs/self_development" className="block px-4 py-2 hover:bg-gray-100 text-center">自己研鑽・資格取得関連</Link>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li>
                         <Link href="/others/about_me" className="hover:underline">
@@ -36,5 +60,5 @@ export function Header() {
                 </ul>
             </nav>
         </header>
-    )
+    );
 }
