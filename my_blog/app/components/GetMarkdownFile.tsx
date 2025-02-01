@@ -11,6 +11,7 @@ export function getAllPosts() {
         date: string;
         category: string;
         description: string;
+        read_time: string;
     }
 
     const fileNames = fs.readdirSync(postsDirectory);
