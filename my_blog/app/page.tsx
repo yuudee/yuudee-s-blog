@@ -63,6 +63,7 @@ export default function Home() {
                   key={post.slug}
                   title={post.title}
                   date={post.date}
+                  read_time={post.read_time}
                   excerpt={post.description}
                   slug={post.slug}
                 />
@@ -81,6 +82,7 @@ export default function Home() {
                   key={post.slug}
                   title={post.title}
                   date={post.date}
+                  read_time={post.read_time}
                   excerpt={post.description}
                   slug={post.slug}
                 />
@@ -99,6 +101,7 @@ export default function Home() {
                   key={post.slug}
                   title={post.title}
                   date={post.date}
+                  read_time={post.read_time}
                   excerpt={post.description}
                   slug={post.slug}
                 />
