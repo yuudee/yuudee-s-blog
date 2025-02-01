@@ -19,6 +19,7 @@ export function getAllPosts() {
                 title: data.title || 'No Title',   // タイトルがない場合のデフォルト
                 date: data.date || '0000-00-00',   // dateがない場合のデフォルト
                 category: data.category || 'uncategorized',  // カテゴリがない場合のデフォルト
+                read_time: data.read_time || '0m',
                 description: data.description || 'No Description', // 記事の説明がない場合
             };
         });
