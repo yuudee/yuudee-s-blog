@@ -5,6 +5,7 @@ read_time : '3m'
 image: '/profile.png'
 description: 'これはyuudeeの自己紹介ページです'
 category: 'security'
+published: true
 ---
 
 # はじめに

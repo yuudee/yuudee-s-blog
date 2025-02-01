@@ -12,6 +12,7 @@ export function getAllPosts() {
         category: string;
         description: string;
         read_time: string;
+        published: boolean;
     }
 
     const fileNames = fs.readdirSync(postsDirectory);
@@ -30,8 +31,9 @@ export function getAllPosts() {
                 category: data.category || 'uncategorized',
                 description: data.description || '',
                 read_time: data.read_time || 'N/A', // 🔹 read_time を追加
+                published: data.published !== false, // 🔹 `published: false` の記事を除外するための処理
             };
-        });
+        }).filter(post => post.published); // 🔹 `published: true` の記事のみを残す;
 
     // カテゴリごとに分類（カテゴリがない場合も空の配列を確保）
     const categorizedPosts: Record<string, Post[]> = {
