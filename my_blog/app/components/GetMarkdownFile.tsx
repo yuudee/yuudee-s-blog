@@ -16,7 +16,10 @@ export function getAllPosts() {
 
             return {
                 slug: fileName.replace(/\.md$/, ''),
-                ...data,
+                title: data.title || 'No Title',   // タイトルがない場合のデフォルト
+                date: data.date || '0000-00-00',   // dateがない場合のデフォルト
+                category: data.category || 'uncategorized',  // カテゴリがない場合のデフォルト
+                description: data.description || 'No Description', // 記事の説明がない場合
             };
         });
 
@@ -25,7 +28,7 @@ export function getAllPosts() {
 
     // カテゴリごとに分類してソート
     const categorizedPosts = posts.reduce((acc, post) => {
-        const category = post.category || 'uncategorized'; // カテゴリがない場合は 'uncategorized'
+        const category = post.category
         if (!acc[category]) {
             acc[category] = [];
         }
