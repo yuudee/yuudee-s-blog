@@ -29,6 +29,7 @@ export function getAllPosts() {
                 date: data.date || '1970-01-01',
                 category: data.category || 'uncategorized',
                 description: data.description || '',
+                read_time: data.read_time || 'N/A', // 🔹 read_time を追加
             };
         });
 
