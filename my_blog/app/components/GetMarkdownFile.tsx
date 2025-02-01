@@ -5,9 +5,17 @@ import matter from 'gray-matter';
 const postsDirectory = path.join(process.cwd(), 'posts');
 
 export function getAllPosts() {
+    interface Post {
+        slug: string;
+        title: string;
+        date: string;
+        category: string;
+        description: string;
+    }
+
     const fileNames = fs.readdirSync(postsDirectory);
 
-    const posts = fileNames
+    const posts: Post[] = fileNames
         .filter(fileName => fileName.endsWith('.md'))
         .map(fileName => {
             const fullPath = path.join(postsDirectory, fileName);
@@ -24,7 +32,7 @@ export function getAllPosts() {
         });
 
     // カテゴリごとに分類（カテゴリがない場合も空の配列を確保）
-    const categorizedPosts: Record<string, any[]> = {
+    const categorizedPosts: Record<string, Post[]> = {
         security: [],
         self_development: [],
         AI_ML: [],
