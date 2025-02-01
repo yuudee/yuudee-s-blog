@@ -27,8 +27,8 @@ export function Header() {
                     <li className="relative"
                         onMouseEnter={() => setIsDropdownOpen(true)}
                         onMouseLeave={() => setIsDropdownOpen(false)}>
-                        <Link href="/blogs/blogs_all" className="hover:underline">
-                            Blogs All
+                        <Link href="/blogs/blogs_all" className="hover:underline flex">
+                            BlogsAll  <Image src={under_arrow} className="w-3 h-3 mt-2" alt="under_arrow" />
                         </Link>
                         <div className={`absolute left-0 mt-2 w-40 bg-white shadow-lg border border-gray-300 rounded-md overflow-hidden transition-all duration-300 ease-in-out -m-10 text-sm ${isDropdownOpen ? 'opacity-100 max-h-60' : 'opacity-0 max-h-0'}`}>
                             <ul>
@@ -49,7 +49,7 @@ export function Header() {
                     </li>
                     <li>
                         <Link href="/others/about_me" className="hover:underline">
-                            About Me
+                            AboutMe
                         </Link>
                     </li>
                     <li>

@@ -34,11 +34,25 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = process.env.GA_ID || '';
   return (
     <html lang="jp">
       <head>
         {/* <script src="https://embed.zenn.studio/js/listen-embed-event.js"></script> */}
         <Script src="https://embed.zenn.studio/js/listen-embed-event.js" strategy="afterInteractive" />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+          strategy='afterInteractive'
+          async
+        />
+        <Script id='google-analytics' strategy='afterInteractive'>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gaId}');
+          `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${Zen_Maru_Font.className} ${M_PLUS_1_Code_Font.className}`}
