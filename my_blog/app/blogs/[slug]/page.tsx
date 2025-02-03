@@ -6,7 +6,7 @@ import { getPosts } from "@/app/components/GetMarkdownFileAll";
 export async function generateStaticParams() {
     return [
         { category: 'security' },  // セキュリティ
-        { category: 'self_development' }, // 自己啓発
+        { category: 'self_development' }, // その他記事
         { category: 'AI_ML' }  // AI・機械学習
     ];
 }
@@ -23,7 +23,7 @@ const CategoryPage = async ({ params }) => {
         } else if (slug === 'ai_ml') {
             return 'AI機械学習関連記事';
         } else if (slug === 'self_development') {
-            return '自己研鑽・資格取得関連記事';
+            return 'その他(資格・自己研鑽など)記事';
         } else {
             return `${slug} 記事`;
         }
@@ -33,9 +33,9 @@ const CategoryPage = async ({ params }) => {
     return (
         <div className="min-h-screen bg-gray-200">
             <Header />
-            <main className="container mx-auto px-4 py-8 max-w-7xl">
+            <main className="container mx-auto px-4 py-8 max-w-7xl dark:text-black">
                 <h1 className="text-3xl font-bold text-center mb-8">{categoryNameText}</h1>
-                <div className="grid md:grid-cols-[1fr_20fr_1fr] gap-10 mb-5">
+                <div className="grid md:grid-cols-[1fr_100fr_1fr] gap-10 mb-5">
                     <div></div>
                     <div>
                         <div className='bg-white gap-5 rounded'>

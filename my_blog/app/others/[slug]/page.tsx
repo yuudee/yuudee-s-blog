@@ -24,7 +24,7 @@ const PostPage = async ({ params }) => {
         <div className='bg-gray-200'>
             <ZennEmbed />
             <Header />
-            <div className="flex flex-col text-center mt-10 mb-10">
+            <div className="flex flex-col text-center mt-10 mb-10 dark:text-black">
                 <h1 className='text-black text-3xl font-bold mb-5 mt-3 '>{title}</h1>
                 <p className="text-center">Published：{date}　　ReadTime：{read_time}</p>
                 <div className='flex justify-center items-center gap-5 mt-8'>

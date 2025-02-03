@@ -72,9 +72,9 @@ export default function Home() {
           </section>
 
           {/* 自己啓発・資格取得カテゴリ */}
-          <section className="mt-10 ml-7 mr-5">
+          <section className="mt-3 ml-7 mr-5">
             <div className="bg-[#4e7ecd] text-white p-3 mb-4 rounded-full">
-              <h2 className="text-center text-xl font-semibold">自己啓発・資格取得関連記事</h2>
+              <h2 className="text-center text-xl font-semibold">その他(資格・自己研鑽など)記事</h2>
             </div>
             <ul className="list-disc">
               {categorizedPosts.self_development.map(post => (
@@ -91,7 +91,7 @@ export default function Home() {
           </section>
 
           {/* AI / 機械学習カテゴリ */}
-          <section className="mt-10 mr-5 mb-10 ml-7">
+          <section className="mt-3 mr-5 mb-10 ml-7">
             <div className="bg-[#4e7ecd] text-white p-3 mb-4 rounded-full">
               <h2 className="text-center text-xl font-semibold">AI・機械学習関連記事</h2>
             </div>
