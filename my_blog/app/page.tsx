@@ -55,7 +55,7 @@ export default function Home() {
           {/* セキュリティ関連カテゴリ */}
           <section className="mt-10 mr-5 ml-7">
             <div className="bg-[#4e7ecd] text-white p-3 mb-6 rounded-full">
-              <h2 className="text-center text-xl font-semibold">セキュリティ関連記事</h2>
+              <h2 className="text-center text-xl font-semibold">ネットワーク・セキュリティ関連記事</h2>
             </div>
             <ul className="list-disc">
               {categorizedPosts.security.map(post => (

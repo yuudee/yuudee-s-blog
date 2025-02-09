@@ -36,7 +36,7 @@ export function Header() {
                                     <Link href="/blogs/blogs_all" className="block px-4 py-2 hover:bg-gray-100 text-center">全ての記事</Link>
                                 </li>
                                 <li>
-                                    <Link href="/blogs/security" className="block px-4 py-2 hover:bg-gray-100 text-center">セキュリティ関連</Link>
+                                    <Link href="/blogs/security" className="block px-4 py-2 hover:bg-gray-100 text-center">ネットワーク・セキュリティ関連</Link>
                                 </li>
                                 <li>
                                     <Link href="/blogs/ai_ml" className="block px-4 py-2 hover:bg-gray-100 text-center">AI・機械学習関連</Link>
