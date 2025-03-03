@@ -57,6 +57,11 @@ export function Header() {
                             Book
                         </Link>
                     </li>
+                    <li>
+                        <Link href="/others/skill_experiment" className="hover:underline">
+                            Skill・Experiment
+                        </Link>
+                    </li>
                 </ul>
             </nav>
         </header>

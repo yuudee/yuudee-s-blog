@@ -15,14 +15,14 @@ export default function Home() {
         <div className="flex justify-center gap-2 mb-8">
           <MysnsButton />
         </div>
-        <div className="grid md:grid-cols-[1fr_2fr_1fr] mb-10">
+        <div className="grid md:grid-cols-[1fr_4fr_1fr] mb-10">
           <div></div>
           <div className="rounded-full rounded-lg border border-black bg-white">
             <div className="flex justify-center items-center mt-10">
               <Image alt="sns_icon" className="w-20 h-20 rounded-full" src={profile_img} />
             </div>
             <div className="w-full flex flex-col justify-center items-center mb-10 dark:text-black">
-              <p className="flex justify-center items-center">yuudee</p>
+              <p className="flex justify-center items-center mb-3 text-lg">@yuudee</p>
               <p className="flex justify-center items-center">地方国立大のM2</p>
               <p className="flex justify-center items-center">AIセキュリティに関する研究してます</p>
               <p className="flex justify-center items-center">保有資格：FE・AP・SC(未登録)</p>

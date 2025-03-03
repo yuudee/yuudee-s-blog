@@ -33,12 +33,12 @@ const CategoryPage = async ({ params }) => {
     return (
         <div className="min-h-screen bg-gray-200">
             <Header />
-            <main className="container mx-auto px-4 py-8 max-w-7xl dark:text-black">
+            <main className="container mx-auto px-4 py-5 max-w-7xl dark:text-black">
                 <h1 className="text-3xl font-bold text-center mb-8">{categoryNameText}</h1>
                 <div className="grid md:grid-cols-[1fr_100fr_1fr] gap-10 mb-5">
                     <div></div>
                     <div>
-                        <div className='bg-white gap-5 rounded'>
+                        <div className='bg-white gap-5 rounded p-8'>
                             <div className='bg-white gap-5 rounded'>
                                 {posts.length > 0 ? (
                                     <div className='grid md:grid-cols-[1fr_1fr_1fr]'>
