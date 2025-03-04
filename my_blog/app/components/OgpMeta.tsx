@@ -1,3 +1,4 @@
+"use client";
 import Head from "next/head";
 
 const OgpMeta = ({ title, description, image, url }) => {
