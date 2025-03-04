@@ -45,7 +45,7 @@ const CategoryPage = async ({ params }) => {
                                         {posts.map(post => (
                                             <PostCard
                                                 key={post.slug}
-                                                image={post.image}
+                                                tilte={post.title}
                                                 date={post.date}
                                                 read_time={post.read_time}
                                                 excerpt={post.description}
