@@ -2,7 +2,7 @@
 title: '自己紹介'
 date: '2025/01/18'
 read_time : '5m'
-image: '/profile.png'
+image: '/imgs/profile_img.png'
 description: '自己紹介用ページ'
 category: 'security'
 ---

@@ -2,7 +2,7 @@
 title: '保有スキル・いままでの経験について'
 date: '2025/03/03'
 read_time : '5m'
-image: '/profile.png'
+image: '/imgs/profile_img.png'
 description: '私の保有スキル・今までの経験について'
 ---
 

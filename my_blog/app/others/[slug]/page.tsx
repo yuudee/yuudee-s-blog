@@ -13,7 +13,7 @@ import Markdown_to_Html from '@/app/components/MarkdownToHtmlZenn';
 export async function generateMetadata({ params }) {
     const BASE_URL = "https://yuudee.net"; // ここに本番のドメインを設定
     const { slug } = params;
-    const filePath = path.join(process.cwd(), "posts", `${slug}.md`);
+    const filePath = path.join(process.cwd(), "others", `${slug}.md`);
     const fileContents = fs.readFileSync(filePath, "utf8");
     const { data } = matter(fileContents);
 
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
             title: data.title,
             description: data.description,
             images: [{ url: imageUrl }],
-            url: `https://yuudee.net/posts/${slug}`,
+            url: `https://yuudee.net/other/${slug}`,
         },
     };
 }

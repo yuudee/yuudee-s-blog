@@ -2,7 +2,7 @@
 title: '今までに読んだ本一覧'
 date: '2025/02/19'
 read_time : '5m'
-image: '/profile.png'
+image: '/imgs/profile_img.png'
 description: '今までに読んだ本リスト・おすすめ本リスト'
 ---
 
