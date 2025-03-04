@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
+import profile_img from '../../public/imgs/profile.png'
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -28,6 +29,7 @@ export function getPosts(category: string) {
             return {
                 slug: fileName.replace(/\.md$/, ''),
                 title: data.title || 'No Title',
+                image: data.image || { profile_img },
                 date: data.date || '1970-01-01',
                 category: data.category || 'uncategorized',
                 description: data.description || '',

@@ -2,7 +2,7 @@
 title: 'VPSにメールサーバ構築してみた(SPF，DKIM，DMARC対応)'
 date: '2025/03/04'
 read_time : '1h'
-image: '/profile.png'
+image: '/eyecatch/mail_server.png'
 description: 'VPSにメールサーバを構築してみた'
 category: 'security'
 published: true

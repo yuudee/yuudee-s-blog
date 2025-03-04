@@ -9,7 +9,7 @@ import { getAllPosts } from "./components/GetMarkdownFile";
 export default function Home() {
   const { sortedPosts, categorizedPosts } = getAllPosts();
   return (
-    <div className="bg-gray-200">
+    <div className="min-h-screen bg-gray-200">
       <Header />
       <main className="container mx-auto px-4 py-8">
         <div className="flex justify-center gap-2 mb-8">

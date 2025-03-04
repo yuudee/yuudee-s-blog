@@ -9,6 +9,7 @@ import X_logo from '../../../public/imgs/X_logo.png';
 import Image from "next/image";
 import ZennEmbed from '@/app/components/ZennEmbed';
 import Markdown_to_Html from '@/app/components/MarkdownToHtmlZenn';
+import OgpMeta from '@/app/components/OgpMeta';
 
 const PostPage = async ({ params }) => {
     const param_slug = await params;
@@ -20,26 +21,39 @@ const PostPage = async ({ params }) => {
     const title = data.title;
     const date = data.date;
     const read_time = data.read_time;
+    const description = data.descripton;
+    const ogp_img = data.image;
+    const ogp_url = path.join(`https://yuudee.net/posts/`, `${slug}`);
+
 
     return (
-        <div className='bg-gray-200'>
-            <ZennEmbed />
-            <Header />
-            <div className="flex flex-col text-center mt-10 mb-10 dark:text-black">
-                <h1 className='text-black text-3xl font-bold mb-5 mt-3 '>{title}</h1>
-                <p className="text-center">Published：{date}　　ReadTime：{read_time}</p>
-                <div className='flex justify-center items-center gap-5 mt-8'>
-                    <ShareLink url={`${process.env.BASE_URL}/posts/${slug}`} />
-                    <div className='mt-2.5 hover:transform hover:duration-500 hover:scale-110 cursor-pointer'>
-                        <a href={`https://twitter.com/intent/tweet?text=&url=https://yuudee.net/posts/${slug}`}>
-                            <Image alt="sns_icon" className='w-7 h-7' src={X_logo} />
-                        </a>
+        <>
+            <OgpMeta
+                title={title}
+                description={description}
+                image={ogp_img}
+                url={ogp_url}
+            />
+
+            <div className='bg-gray-200'>
+                <ZennEmbed />
+                <Header />
+                <div className="flex flex-col text-center mt-10 mb-10 dark:text-black">
+                    <h1 className='text-black text-3xl font-bold mb-5 mt-3 '>{title}</h1>
+                    <p className="text-center">Published：{date}　　ReadTime：{read_time}</p>
+                    <div className='flex justify-center items-center gap-5 mt-8'>
+                        <ShareLink url={`${process.env.BASE_URL}/posts/${slug}`} />
+                        <div className='mt-2.5 hover:transform hover:duration-500 hover:scale-110 cursor-pointer'>
+                            <a href={`https://twitter.com/intent/tweet?text=&url=https://yuudee.net/posts/${slug}`}>
+                                <Image alt="sns_icon" className='w-7 h-7' src={X_logo} />
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <Markdown_to_Html MarkdownText={content} />
+                <Footer />
             </div>
-            <Markdown_to_Html MarkdownText={content} />
-            <Footer />
-        </div>
+        </>
     );
 };
 

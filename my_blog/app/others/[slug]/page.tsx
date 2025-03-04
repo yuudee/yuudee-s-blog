@@ -11,7 +11,7 @@ import ZennEmbed from '@/app/components/ZennEmbed';
 import Markdown_to_Html from '@/app/components/MarkdownToHtmlZenn';
 
 const PostPage = async ({ params }) => {
-    const { slug } = params;
+    const { slug } = await params;
     const filePath = path.join(process.cwd(), 'others', `${slug}.md`);
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContents);
