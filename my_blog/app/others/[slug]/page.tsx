@@ -11,10 +11,16 @@ import ZennEmbed from '@/app/components/ZennEmbed';
 import Markdown_to_Html from '@/app/components/MarkdownToHtmlZenn';
 
 export async function generateMetadata({ params }) {
+    const BASE_URL = "https://yuudee.net"; // ここに本番のドメインを設定
     const { slug } = params;
     const filePath = path.join(process.cwd(), "posts", `${slug}.md`);
     const fileContents = fs.readFileSync(filePath, "utf8");
     const { data } = matter(fileContents);
+
+    // data.image が相対パスの場合、絶対パスに変換
+    const imageUrl = data.image.startsWith("http")
+        ? data.image
+        : `${BASE_URL}${data.image}`;
 
     return {
         title: `${data.title} | yuudee's blog`,
@@ -22,7 +28,7 @@ export async function generateMetadata({ params }) {
         openGraph: {
             title: data.title,
             description: data.description,
-            images: [{ url: data.image }],
+            images: [{ url: imageUrl }],
             url: `https://yuudee.net/posts/${slug}`,
         },
     };
