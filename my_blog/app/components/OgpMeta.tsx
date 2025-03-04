@@ -1,5 +1,6 @@
 "use client";
 import Head from "next/head";
+import GoogleAnalytics from "./GoogleAnalytics";
 
 const OgpMeta = ({ title, description, image, url }) => {
     return (

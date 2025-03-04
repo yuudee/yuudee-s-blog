@@ -2,7 +2,7 @@
 title: 'RSA暗号の仕組みについて'
 date: '2025/01/18'
 read_time : '30m'
-image: '/profile.png'
+image: '/imgs/eyecatch/RSA_mechanism.png'
 description: 'RSA暗号の仕組みと簡単なCTF問題'
 category: 'security'
 published: true

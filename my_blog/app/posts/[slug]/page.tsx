@@ -11,6 +11,24 @@ import ZennEmbed from '@/app/components/ZennEmbed';
 import Markdown_to_Html from '@/app/components/MarkdownToHtmlZenn';
 import OgpMeta from '@/app/components/OgpMeta';
 
+export async function generateMetadata({ params }) {
+    const { slug } = params;
+    const filePath = path.join(process.cwd(), "posts", `${slug}.md`);
+    const fileContents = fs.readFileSync(filePath, "utf8");
+    const { data } = matter(fileContents);
+
+    return {
+        title: `${data.title} | yuudee's blog`,
+        description: data.description,
+        openGraph: {
+            title: data.title,
+            description: data.description,
+            images: [{ url: data.image }],
+            url: `https://yuudee.net/posts/${slug}`,
+        },
+    };
+}
+
 const PostPage = async ({ params }) => {
     const param_slug = await params;
     const { slug } = param_slug;

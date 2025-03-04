@@ -2,7 +2,7 @@
 title: '/dev/nullって結局何？'
 date: '2025/02/07'
 read_time : '10m'
-image: '/profile.png'
+image: '/imgs/eyecatch/dev_null.png'
 description: 'Linux触っててよく見る/dev/nullについて'
 category: 'security'
 published: true

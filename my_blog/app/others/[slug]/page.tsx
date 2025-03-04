@@ -12,26 +12,19 @@ import Markdown_to_Html from '@/app/components/MarkdownToHtmlZenn';
 
 export async function generateMetadata({ params }) {
     const { slug } = params;
-    const filePath = path.join(process.cwd(), 'posts', `${slug}.md`);
-    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const filePath = path.join(process.cwd(), "posts", `${slug}.md`);
+    const fileContents = fs.readFileSync(filePath, "utf8");
     const { data } = matter(fileContents);
 
     return {
-        title: data.title,
-        description: data.description, // 修正: `descripton` → `description`
+        title: `${data.title} | yuudee's blog`,
+        description: data.description,
         openGraph: {
             title: data.title,
             description: data.description,
             images: [{ url: data.image }],
             url: `https://yuudee.net/posts/${slug}`,
-            type: "article",
         },
-        twitter: {
-            card: "summary_large_image",
-            title: data.title,
-            description: data.description,
-            images: [{ url: data.image }],
-        }
     };
 }
 
