@@ -18,7 +18,7 @@ export function Header() {
                 </div>
             </div>
             <nav className="bg-gray-200 text-black py-2 border-t border-black">
-                <ul className="container mx-auto max-w-6xl flex justify-center items-center gap-8 text-xl">
+                <ul className="container mx-auto max-w-6xl flex flex-wrap justify-center items-center gap-x-5 gap-y-2 text-xl">
                     <li>
                         <Link href="/" className="hover:underline">
                             Home
