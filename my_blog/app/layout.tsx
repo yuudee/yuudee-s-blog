@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Zen_Maru_Gothic, M_PLUS_1_Code } from "next/font/google";
-import GoogleAnalytics from "./components/GoogleAnalytics";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,7 +25,7 @@ const M_PLUS_1_Code_Font = M_PLUS_1_Code({
 
 export const metadata: Metadata = {
   title: "yuudee's blog",
-  description: "技術ブログ - Web開発、機械学習、Next.js など",
+  description: "技術ブログ，セキュリティ，ネットワーク，サーバ，AI・機械学習など",
 };
 
 export default function RootLayout({
@@ -37,7 +37,21 @@ export default function RootLayout({
   return (
     <html lang="jp" >
       <head>
-        <GoogleAnalytics />
+        {/* <script src="https://embed.zenn.studio/js/listen-embed-event.js"></script> */}
+        <Script src="https://embed.zenn.studio/js/listen-embed-event.js" strategy="afterInteractive" />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+          strategy='afterInteractive'
+          async
+        />
+        <Script id='google-analytics' strategy='afterInteractive'>
+          {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${gaId}');
+                `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${Zen_Maru_Font.className} ${M_PLUS_1_Code_Font.className}`}
