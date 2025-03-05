@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   title: "yuudee's blog",
   description: "技術ブログ，セキュリティ，ネットワーク，サーバ，AI・機械学習など",
 };
-
+export const dynamic = 'force-dynamic';
 export default function RootLayout({
   children,
 }: Readonly<{
