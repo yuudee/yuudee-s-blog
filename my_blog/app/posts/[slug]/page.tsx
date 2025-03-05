@@ -36,19 +36,26 @@ export async function generateMetadata({ params }) {
 }
 
 const PostPage = async ({ params }) => {
+
     const param_slug = await params;
     const { slug } = param_slug;
     const filePath = path.join(process.cwd(), 'posts', `${slug}.md`);
     const fileContents = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContents);
 
+    const BASE_URL = "https://yuudee.net"; // ここに本番のドメインを設定
+
+    // data.image が相対パスの場合、絶対パスに変換
+    const imageUrl = data.image.startsWith("http")
+        ? data.image
+        : `${BASE_URL}${data.image}`;// data.image が相対パスの場合、絶対パスに変換
+
     const title = data.title;
     const date = data.date;
     const read_time = data.read_time;
     const description = data.descripton;
-    const ogp_img = data.image;
+    const ogp_img = imageUrl;
     const ogp_url = path.join(`https://yuudee.net/posts/`, `${slug}`);
-
 
     return (
         <>
