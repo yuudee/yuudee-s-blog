@@ -74,6 +74,7 @@ CTFとかTHMとかのWriteupとかを上げてます．
 - P3NFEST 2024 SUMMER(online参加)
 - FFRIセキュリティ主催(新ローレイヤー勉強会#4)
 - セキュリティエンジニアの知識地図 - Forkwell Library #82
+- P3NFEST 2025 Summer現地参加
 
 ## その他
 - 第2回：RWPL自己満LT大会
