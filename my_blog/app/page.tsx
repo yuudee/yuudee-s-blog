@@ -23,9 +23,8 @@ export default function Home() {
             </div>
             <div className="w-full flex flex-col justify-center items-center mb-10 dark:text-black">
               <p className="flex justify-center items-center mb-3 text-lg">@yuudee</p>
-              <p className="flex justify-center items-center">地方国立大のM2</p>
-              <p className="flex justify-center items-center">AIセキュリティに関する研究してます</p>
-              <p className="flex justify-center items-center">保有資格：FE・AP・SC(未登録)</p>
+              <p className="flex justify-center items-center">Sierでセキュリティ関係の仕事をしてる社会人1年目です．</p>
+              <p className="flex justify-center items-center">保有資格：FE・AP・SC(登録済み)</p>
               <p className="flex justify-center items-center">セキュリティ・サーバー・ネットワーク・AIなどに興味あります</p>
             </div>
           </div>
